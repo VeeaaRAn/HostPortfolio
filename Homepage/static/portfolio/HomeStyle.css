@@ -422,35 +422,3 @@ body {
 
 
 /* 1. Control the layout using the PARENT container */
-#profile {
-    display: flex;        /* Puts the image and text side-by-side */
-    align-items: center;  /* Centers the image vertically relative to the text */
-    gap: 30px;            /* Adds space between the image and the description */
-    
-    /* Optional: Limits width so lines aren't too long to read */
-    max-width: 900px;     
-    margin: 0 auto;       /* Centers the whole block on the page */
-}
-
-/* 2. Style the Image to be a fixed size circle */
-#dp {
-    width: 150px;         /* Fixed width */
-    height: 150px;        /* Fixed height */
-    object-fit: cover;    /* Ensures the photo doesn't look squished */
-    border-radius: 50%;   /* Makes it a circle */
-    
-    /* CRITICAL: Prevents the image from shrinking if the text gets too long */
-    flex-shrink: 0;       
-    
-    /* Optional: nice border/shadow */
-    border: 3px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* 3. Style the Description Text */
-#description {
-    font-size: 1.1rem;
-    line-height: 1.6;     /* Makes the text easier to read */
-    color: #333;          /* Dark grey is easier on eyes than pure black */
-    margin: 0;            /* Removes default browser margins */
-}
