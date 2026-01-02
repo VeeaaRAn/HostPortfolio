@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    
+    <script src="{% static 'portfolio/Function.js' %}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawR/h/xU3p9KFLU48fU4wTzT10qU1R36uT/o=" 
+        crossorigin="anonymous">
+    </script>
+    
+    <link href="{% static 'portfolio/HomeStyle.css' %}" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Vasantraj Padmanaban - Portfolio</title>
+</head>
+
+<body>
+    <div>
+        <div id="navbar">
+            <h1 id="name">Vasantraj Padmanaban</h1>
+            <div id="sidelinks">
+                <a href="{% url 'home' %}" target="_blank" rel="noopener noreferrer">
+                    <img class="Home" src="{% static 'portfolio/home.png' %}" alt="Home">
+                </a>
+                <a href="#Contacts" rel="noopener noreferrer">
+                    <img class="Contact" src="{% static 'portfolio/contact-book.png' %}" alt="Contacts">
+                </a>
+                <a href="#HotProjects" rel="noopener noreferrer">
+                    <img class="Contact" src="{% static 'portfolio/hot.png' %}" alt="Hot Projects">
+                </a>
+            </div>
+        </div>
+
+        <div id="techstack">
+            <h1> 
+                <img class="logo" src="{% static 'portfolio/gd.png' %}" alt="">GameDeveloper | 
+                <img class="logo" src="{% static 'portfolio/de.png' %}" alt="">DataEngineer | 
+                <img class="logo" src="{% static 'portfolio/fs.png' %}" alt="">FullStack Developer 
+            </h1>
+        </div>
+
+        <section id="hero">
+            <h1>Hi, I'm <span>Vasantraj Padmanaban</span></h1>
+            <h3>Game Developer | Data Engineer | Full Stack Developer</h3>
+            <p>Turning code into experiences. Blending creativity with computation.</p>
+            <a href="#fields" class="btn-hero">Explore My Work</a>
+        </section>
+
+        <div id="divmainbody">
+            <div id="profile">
+                <img id="dp" src="{% static 'portfolio/pp.jpg' %}" alt="Profile Picture">
+                <p id="description"> Versatile Entry-Level Engineer specializing in Game Development and Full Stack systems. | My technical approach is defined by an unwavering commitment to perfection and punctuality. I build efficient, stable systems, ranging from C++ graphics programming and game engine design (DX11, Shaders) to developing robust, scalable Full Stack applications. I back this foundation with a strong analytical core, demonstrated by my certified expertise in Google Cloud Infrastructure and published work in Deep Learning—an achievement that proves my dedication to technical rigor and achieving a flawless 97.41% accuracy in complex systems. Seeking an entry-level role where precision and diverse technical skills are valued. Let's create high-quality, high-performance experiences.</p>
+            </div>
+
+            <div id="education">
+                <div id="amrita">
+                    <img src="{% static 'portfolio/Amrita.jpg' %}" alt="Amrita University">
+                    <div id="Details">
+                        <h1>B.Tech - Electrical and Computer Engineering</h1>
+                        <h3>Powering Tomorrow's Intelligence: At Amrita Coimbatore, Electrical & Computer Engineering fuses deep systems knowledge with pioneering AI to engineer the future—from the circuit board to the cloud.</h3>
+                    </div>
+                </div>
+                <div id="abertay">
+                    <img src="{% static 'portfolio/Abertay.png' %}" alt="Abertay University">
+                    <div id="Details">
+                        <h1>Msc - Computer Games Technology</h1>
+                        <h3>From Algorithm to Animation: Master the C++ and graphics programming skills demanded by the global games industry at Abertay</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fields">
+                <div id="gamedev">
+                    <div id="gamecard" class="card" style="width: 18rem;">
+                        <img src="{% static 'portfolio/gds.png' %}" class="card-img-top w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Game Projects</h5>
+                            <p class="card-text"> A curated look into my world of game design and creative direction. Think of this page as the deck that holds the most powerful cards—my best projects and most valuable skills. Select your path below and delve into the full portfolio showcase.</p>
+                            <a id="GameProjects" href="{% url 'game_projects' %}" class="btn btn-primary">Checkout my games and projects</a>
+                        </div>
+                    </div>  
+                </div>  
+                <div id="data">       
+                    <div id="datacard" class="card" style="width: 18rem;">
+                        <img src="{% static 'portfolio/ded.jpeg' %}" class="card-img-top w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">My models</h5>
+                            <p class="card-text"> My central laboratory for Machine Learning and Data Science. I build, train, and deploy production-ready models that solve high-value business problems, from predictive analytics to natural language processing. Step inside to explore my research, code repositories, and quantified impact metrics.</p>
+                            <a id="DataProjects" href="{% url 'data_projects' %}" class="btn btn-primary">Explore my Data models</a>
+                        </div>
+                    </div>
+                </div> 
+                <div id="website">
+                    <div id="websitecard" class="card" style="width: 18rem;">
+                        <img src="{% static 'portfolio/fsd.png' %}" class="card-img-top w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Webpage Designs</h5>
+                            <p class="card-text"> The launchpad for my professional work in Full-Stack Web Development. I specialize in engineering clean, performant applications and transforming complex requirements into seamless user experiences. This portal is your fast pass to deep-dive case studies, live demos, and technical project breakdowns.</p>
+                            <a id="webProjects" href="{% url 'web_projects' %}" class="btn btn-primary">Webpage Designs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="Text">Few of My achievements</h3>
+            <div id="HotProjects" class="carousel slide fullscreen-carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#HotProjects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#HotProjects" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#HotProjects" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#HotProjects" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="{% static 'portfolio/Certificate.pdf' %}" frameborder="0" width="100%" height="100%"></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Associate Cloud Engineer Certificate</h5>
+                            <p>Thrilled to share a recent achievement! I've successfully completed the Google Cloud Career Readiness - Associate Cloud Engineer track, including all required courses and labs.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Uyb_jCF0_i0?si=ngVBv-oeMfbhlM4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Real-Time Graphics Demo: Custom Shaders, Multi-Shadows & Advanced Rendering Effects</h5>
+                            <p>This video showcases a series of custom real-time graphics features and shaders developed in a game engine environment.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="{% static 'portfolio/Yolo.pdf' %}" frameborder="0" width="100%" height="100%"></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Precision Pesticide Spraying via Deep Learning Drone</h5>
+                            <p>Our novel approach integrates Capsule Networks (CapsNet) for robust feature extraction with YOLOv8 for efficient, real-time object detection.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'portfolio/Convolution.png' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Deep Learning for COVID-19 CT Diagnosis: A Data Leakage Resistant Approach</h5>
+                            <p>This project explores the power of Convolutional Neural Networks (CNNs) for the binary classification of CT scans.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#HotProjects" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#HotProjects" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+        <footer id="Contacts" class="contact-footer">
+            <div>
+                <a href="https://github.com/VeeaaRAn"><img src="{% static 'portfolio/git-repo-forked.png' %}" alt="">Find me at GitHub </a>
+            </div>
+            <div>
+                <a href="mailto:vasanthraj2002@gmail.com"><img src="{% static 'portfolio/at.png' %}" alt="">vasanthraj2002@gmail.com </a>
+            </div>
+            <div>
+                <a href="tel:+447448702907"><img src="{% static 'portfolio/phone-plus.png' %}" alt="">+44 7448702907 </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

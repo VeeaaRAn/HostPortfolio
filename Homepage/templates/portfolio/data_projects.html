@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Models | Vasantraj</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0c15;
+            --card-bg: #13141f;
+            --data-blue: #3a86ff;
+            --data-purple: #8338ec;
+            --text-main: #e2e8f0;
+            --text-muted: #64748b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'JetBrains Mono', monospace;
+            /* Technical Dot Grid Background */
+            background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+            background-size: 40px 40px;
+            min-height: 100vh;
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            padding: 80px 0 50px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: linear-gradient(180deg, rgba(11,12,21,0) 0%, var(--bg-color) 100%);
+            margin-bottom: 50px;
+        }
+
+        .title-badge {
+            background: rgba(58, 134, 255, 0.1);
+            color: var(--data-blue);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border: 1px solid var(--data-blue);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Technical Cards --- */
+        .data-card {
+            background: var(--card-bg);
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .data-card:hover {
+            border-color: var(--data-purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px -10px rgba(131, 56, 236, 0.3);
+        }
+
+        /* Header Bar of the Card */
+        .card-header-bar {
+            background: #0f1019;
+            padding: 10px 15px;
+            border-bottom: 1px solid #2d3748;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: var(--data-blue);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; box-shadow: 0 0 0 0 rgba(58, 134, 255, 0.4); }
+            70% { opacity: 1; box-shadow: 0 0 0 6px rgba(58, 134, 255, 0); }
+            100% { opacity: 0.5; box-shadow: 0 0 0 0 rgba(58, 134, 255, 0); }
+        }
+
+        /* Card Image Area */
+        .img-container {
+            height: 180px;
+            overflow: hidden;
+            border-bottom: 1px solid #2d3748;
+            position: relative;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.5s;
+            filter: grayscale(20%) sepia(10%) hue-rotate(190deg); /* Blue-ish tint */
+        }
+
+        .data-card:hover .img-container img {
+            opacity: 1;
+            filter: none;
+            transform: scale(1.05);
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        /* Footer / Stats Area */
+        .card-stats {
+            margin-top: auto;
+            border-top: 1px solid #2d3748;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-item {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .stat-item span {
+            color: var(--data-purple);
+            font-weight: bold;
+        }
+
+        .btn-analyze {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-main);
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-analyze:hover {
+            background: var(--data-purple);
+            border-color: var(--data-purple);
+            color: white;
+        }
+
+        /* Navigation */
+        .nav-back {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .nav-back:hover { color: white; }
+
+    </style>
+</head>
+<body>
+
+    <a href="{% url 'home' %}" class="nav-back">&lt; ./RETURN_ROOT</a>
+
+    <div class="container header-section text-center">
+        <span class="title-badge">NEURAL_NETWORKS // ANALYTICS</span>
+        <h1>RESEARCH LABORATORY</h1>
+        <p style="color: #64748b; margin-top: 15px;">Constructing neural pathways, optimizing pipelines, and extracting signal from noise.</p>
+    </div>
+
+    <div class="container pb-5">
+        <div class="row g-4">
+            {% for project in projects %}
+            <div class="col-md-6 col-lg-4">
+                <div class="data-card">
+                    <div class="card-header-bar">
+                        <span>ID: MODEL_{{ project.id|stringformat:"03d" }}</span>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <span class="status-dot"></span>
+                            <span>READY</span>
+                        </div>
+                    </div>
+
+                    <div class="img-container">
+                        {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                        {% else %}
+                            <div style="height: 100%; display: flex; align-items: center; justify-content: center; background: #0f1019;">
+                                <span style="color: #333;">[NO_DATA]</span>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|truncatewords:25 }}</p>
+
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                TYPE: <span>SUPERVISED</span>
+                            </div>
+                            
+                            {% if project.link %}
+                                <a href="{{ project.link }}" target="_blank" class="btn-analyze">VIEW DATASET</a>
+                            {% else %}
+                                <span style="font-size: 0.8rem; color: #444; cursor: not-allowed;">PRIVATE</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <div class="col-12 text-center py-5">
+                    <p style="color: #444;">// AWAITING INPUT DATA...</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

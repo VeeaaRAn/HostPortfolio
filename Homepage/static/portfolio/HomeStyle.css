@@ -1,0 +1,456 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+    background-color: #F9FAFB;
+}
+@keyframes fadeInProfile {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* #divmainbody {
+  background: linear-gradient(-45deg, #14213D, #FCA311, #E5E5E5, #FFFFFF);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
+
+#divmainbody {
+background-color: #0B0C10;
+}
+h1, h2, h3 {
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+a, button {
+  color: #66FCF1;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover, button:hover {
+  color: #FFFFFF;
+}
+
+
+/* Main*/
+/* NAVBAR */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: #14213D;
+}
+
+#name{
+    margin-left: 80px;
+    color: #E5E5E5;
+    letter-spacing: 1.5px;
+    /* text-shadow: 0px 0px 8px white; */
+}
+
+#sidelinks{
+    display: flex;
+    flex-basis: 50%;
+    color: #FCA311;
+    font-style: italic;
+    font-family: cursive;
+    
+}
+
+#sidelinks a{
+    flex-basis: 50%;
+    align-items: center;
+}
+
+#sidelinks img{
+    transition:transform 1s ease;
+}
+
+#sidelinks img:hover{
+    transform: scale(1.2) rotate(360deg);
+}
+
+.Home{
+    text-shadow: 0px 0px 10px black;
+    opacity: 0.5;
+    width: 40px;
+    filter: invert(70%) sepia(90%) saturate(2000%) hue-rotate(340deg);
+}
+
+.Contact{
+    text-shadow: 0px 0px 10px black;
+    opacity: 0.5;
+    width: 40px;
+    filter: invert(70%) sepia(90%) saturate(2000%) hue-rotate(340deg);
+}
+
+#techstack{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#techstack h1{
+    font-family: "Bitcount Grid Single";
+    font-weight: 800px;
+}
+/* HERO */
+#hero {
+  background: linear-gradient(to right, #14213D, #1F2D53);
+  color: #FCA311;
+  text-align: center;
+  padding: 120px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#hero span { color: #FFFFFF; }
+
+.btn-hero {
+  margin-top: 20px;
+  background-color: #FCA311;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #FFD369;
+  color: #14213D;
+  transform: translateY(-3px);
+}
+/* PROFILE */
+#profile{
+    display:flex;
+    justify-content: space-between;
+    background: linear-gradient(145deg, #1F2833, #0B0C10);
+    color: #C5C6C7;
+    border: 1px solid #45A29E33;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+    padding: 50px;
+    border-radius: 20px;
+    font-family: "Inconsolata";
+    font-weight:700;
+    transition: all 0.4s ease;
+}
+
+#profile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px #FCA311;;
+}
+
+#dp{
+    border-radius: 40px;
+    margin-top: 80px;
+    margin-left: 20px;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+#dp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(102, 252, 241, 0.6);
+}
+
+#description{
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 90px;
+    flex-grow: 0;
+}
+
+#description::first-line {
+    color: #66FCF1;
+    font-weight: 600;
+}
+
+body {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInProfile 1s ease forwards;
+}
+/* EDUCATION */
+
+#education{
+    /* margin-left: 40px; */
+    background: linear-gradient(145deg, #0B0C10, #1F2833);
+    border-top: 3px solid #45A29E55;
+    border-bottom: 3px solid #45A29E55;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+    color: #C5C6C7;
+}
+
+#amrita{
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    border-bottom: 2px solid black;
+    transition:0.5s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#abertay{
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 2px solid black;
+    transition:all 0.5s ease;
+}
+
+#amrita:hover{
+    transform: translate(-5px,-10px);
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+    border-color: #66FCF1;
+}
+
+#abertay:hover{
+    transform: translate(-5px,-10px);
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+    border-color: #66FCF1;
+}
+
+#amrita img{
+    flex-basis: 10%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border-radius: 30%;
+    border : 2px solid black;
+    margin-bottom: 30px;
+}
+
+#abertay img{
+    flex-basis: 10%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border-radius: 30%;
+    border : 2px solid black;
+}
+
+#Details h3{
+    margin:2%;
+}
+
+
+
+#fields{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 100px 60px;
+    border-top: 2px solid #45A29E55;
+    border-bottom: 2px solid #45A29E55;
+    box-shadow: inset 0 0 30px rgba(102, 252, 241, 0.1);
+    background: radial-gradient(circle at top left, #0B0C10, #1F2833 70%);
+
+
+}
+
+#gamecard{
+    background: linear-gradient(145deg, #1F2833, #0B0C10);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transition:1s ease;
+    color: #66FCF1;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+}
+#datacard{
+    background: linear-gradient(145deg, #1F2833, #0B0C10);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transition:1s ease;
+    color: #66FCF1;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+}
+#websitecard{
+    background: linear-gradient(145deg, #1F2833, #0B0C10);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transition:1s ease;
+    color: #66FCF1;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+}
+#gamecard:hover{
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+    border-color: #66FCF1;
+    transform: translate3d(-5px,-5px,30px);
+}
+
+#datacard:hover{
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+    border-color: #66FCF1;
+    transform: translate3d(-5px,-5px,30px);
+}
+
+#websitecard:hover{
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+    border-color: #66FCF1;
+    transform: translate3d(-5px,-5px,30px);
+}
+/* Fullscreen Carousel */
+.fullscreen-carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-carousel .carousel-inner,
+.fullscreen-carousel .carousel-item,
+.fullscreen-carousel .carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Keeps aspect ratio while filling screen */
+}
+
+/* Optional: make captions readable */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.descimg{
+    width: 150px;
+}
+#GameProjects , #DataProjects , #webProjects {
+  background-color: #14213D;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#GameProjects:hover,#DataProjects:hover,#webProjects:hover {
+  background-color: #FCA311;
+  color: #14213D;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 12px rgba(252, 163, 17, 0.4);
+}
+
+/* 1. Set up the Footer Container */
+.contact-footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0;            /* Light text color */
+    padding: 30px 20px;
+    width: 100%;
+    /* Flex properties based on your existing setup */
+    display: flex;
+    justify-content: space-around; /* Spreads items evenly */
+    align-items: center;
+}
+
+/* 2. Style the Individual Link Containers (the <div>s) */
+.contact-footer > div {
+    /* Ensure divs don't hog space unnecessarily, allowing flex to control width */
+    flex-grow: 1; /* Allows it to expand to use space */
+    text-align: center; /* Center the content inside the div */
+}
+
+/* 3. Style the Anchor Links and Content */
+.contact-footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0 10px; /* Minor horizontal padding */
+    transition: color 0.3s ease;
+    
+    /* Make the anchor link a flex container to align the image and text */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.contact-footer a:hover {
+    color: #00bcd4; /* Highlight color */
+}
+
+/* 4. Implement Vertical Separators (Best Practice) */
+/*
+   We use the ::after pseudo-element on the anchor tag to create the vertical line.
+   This replaces the clumsy "|" character in your HTML.
+*/
+.contact-footer a::after {
+    content: "|"; /* The divider character */
+    color: #444444; /* A lighter gray for the divider */
+    margin-left: 10px;
+}
+
+/* 5. REMOVE the divider character from the very last link */
+.contact-footer > div:last-child a::after {
+    content: none;
+}
+
+/* 6. Style Icons */
+.contact-footer img {
+    height: 24px; /* Set a consistent size for the icon images */
+    width: 24px;
+    vertical-align: middle;
+    filter: invert(100%);
+}
+
+#Text{
+    color: #C5C6C7;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* 1. Control the layout using the PARENT container */
+#profile {
+    display: flex;        /* Puts the image and text side-by-side */
+    align-items: center;  /* Centers the image vertically relative to the text */
+    gap: 30px;            /* Adds space between the image and the description */
+    
+    /* Optional: Limits width so lines aren't too long to read */
+    max-width: 900px;     
+    margin: 0 auto;       /* Centers the whole block on the page */
+}
+
+/* 2. Style the Image to be a fixed size circle */
+#dp {
+    width: 150px;         /* Fixed width */
+    height: 150px;        /* Fixed height */
+    object-fit: cover;    /* Ensures the photo doesn't look squished */
+    border-radius: 50%;   /* Makes it a circle */
+    
+    /* CRITICAL: Prevents the image from shrinking if the text gets too long */
+    flex-shrink: 0;       
+    
+    /* Optional: nice border/shadow */
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 3. Style the Description Text */
+#description {
+    font-size: 1.1rem;
+    line-height: 1.6;     /* Makes the text easier to read */
+    color: #333;          /* Dark grey is easier on eyes than pure black */
+    margin: 0;            /* Removes default browser margins */
+}
